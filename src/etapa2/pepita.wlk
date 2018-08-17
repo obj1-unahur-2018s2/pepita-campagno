@@ -10,8 +10,9 @@ object pepita {
 	method volar(kms) { energia -= kms + 10 }
 	
 	// metodos nuevos
-	method estaDebil() { return true }  // implementar
-	method estaFeliz() { return true }  // implementar
+	method estaDebil() { if (energia <50){return true}return false}  // implementar
+	method estaFeliz() { if (energia.between (500,1000) ){return true}return false}  // implementar
+	
 	
 	method cuantoQuiereVolar() { 
 		var cuanto = self.energia() / 5
@@ -21,7 +22,9 @@ object pepita {
 	}
 	
 	method salirAComer() {
-		self.volar(5)		// "self" es una referencia al objeto que recibe el mensaje
+		self.volar(5)	
+		self.comer(alpiste,80)
+		self.volar(5)	// "self" es una referencia al objeto que recibe el mensaje
 		// ... completar este metodo con las otra acciones sobre self
 	}
 	
