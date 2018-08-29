@@ -13,6 +13,5 @@ object roque {
 		pajaro.comer(alpiste, 300)
 		pajaro.volar(5)	
 		pajaro.haceLoQueQuieras()
-	} 
-	method pupiloActual() { return pajaro } // implementar
+	}  // implementar
 }
